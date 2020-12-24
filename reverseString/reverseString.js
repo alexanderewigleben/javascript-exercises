@@ -1,11 +1,13 @@
 const reverseString = function(wordToBeReversed) {
-    
+
+    var backwards= [];
     var forwards = wordToBeReversed.split("");
-    for (i=0; i < forwards.length - 1; i++){
+    const length = forwards.length;
+    for (i=0; i <length; i++){
         letterMoving = forwards.pop();
-        forwards.unshift(letterMoving);
+        backwards.push(letterMoving);
     }
-    return forwards.join("");
+    return backwards.join("");
 }
 
 module.exports = reverseString
